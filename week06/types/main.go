@@ -2,14 +2,27 @@ package main
 
 import (
 	"fmt"
-	"math"
-	"strings"
+	"reflect"
 )
 
 func main() {
-	fmt.Println(math.Round(2.21))
-	fmt.Println(math.Ceil(2.21))
-	fmt.Println(strings.Title("go developer!"))
-	fmt.Println("Kim\nInha\t\"\\")
-	fmt.Println('2', '가')
+	//var id int16
+	//var name string
+	//var gpa float32
+
+	//var id int16= 999
+	//var name string = "Kim Inha"
+	//var gpa float32 = 3.99
+
+	//var id = 999
+	//var name = "Kim Inha"
+	//var gpa = 3.99
+
+	id := 999
+	name := "Kim Inha"
+	gpa := 3.99
+
+	fmt.Println("학번 : ", id, reflect.TypeOf(id), ", 이름 : ", name, reflect.TypeOf(name))
+	fmt.Println("평점 : ", gpa, reflect.TypeOf(gpa))
+
 }
