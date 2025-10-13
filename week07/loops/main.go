@@ -1,19 +1,13 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
-	"strings"
-	"time"
+	"os"
 )
 
 func main() {
-	var now time.Time = time.Now()
-	var month string = now.Month().String() //month := now.Month()
-	var day int = now.Day()
-	fmt.Println(month, day)
-
-	var univ string = "GO$ Inha$"
-	changer := strings.NewReplacer("$", "!")
-	changed := changer.Replace(univ)
-	fmt.Println(changed)
+	r := bufio.NewReader(os.Stdin)
+	i, _ := r.ReadString('\n')
+	fmt.Println(i)
 }
