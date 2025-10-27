@@ -9,7 +9,7 @@ func swap(first *int, second *int) {
 	temp = *first
 	*first = *second
 	*second = temp
-	fmt.Println(first, second)
+	fmt.Println(*first, *second)
 }
 
 func main() {
