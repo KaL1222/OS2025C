@@ -5,10 +5,11 @@ import (
 )
 
 func main() {
-	subjects := []string{"Go", "Javascript", "Python", "Linux"}
+	subjects := [4]string{"Go", "Javascript", "Python", "Linux"}
 	subjectsSlice := subjects[:3] //slicing
 	subjects[0] = "Java"
-	subjectsSlice = append(subjectsSlice, "Go") //list.append("Go")
+	//subjectsSlice = append(subjectsSlice, "Go")
+	subjectsSlice = append(subjectsSlice, "Go", "DB") //list.append("Go")
 	for _, subject := range subjects {
 		fmt.Println(subject)
 	}
