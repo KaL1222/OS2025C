@@ -8,9 +8,11 @@ import (
 
 func main() {
 	today := calendar.Event{}
-	today.SetTitle("Final Exam D-14...............................")
-
-	err := today.SetYear(2025)
+	err := today.SetTitle("Final Exam D-14")
+	if err != nil {
+		log.Fatal(err)
+	}
+	err = today.SetYear(2025)
 	if err != nil {
 		log.Fatal(err)
 	}
