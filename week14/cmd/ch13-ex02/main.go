@@ -12,16 +12,18 @@ func def(channel chan string) {
 	channel <- "건강의 재구성 썰록(재)\n"
 	channel <- "오늘N\n"
 	channel <- "찾아가는 꾸러기 교실\n"
-
 }
 
 func main() {
-	ch := make(chan int) // int 채널 생성
-
-	go func() {
-		ch <- 123 // 채널에 값 보내기
-	}()
-
-	x := <-ch // 채널에서 값 받기
-	fmt.Println(x)
+	kbs := make(chan string)
+	mbc := make(chan string)
+	go abc(kbs)
+	go def(mbc)
+	fmt.Print(<-kbs)
+	fmt.Print(<-mbc)
+	fmt.Print(<-kbs)
+	fmt.Print(<-mbc)
+	fmt.Print(<-kbs)
+	fmt.Print(<-mbc)
+	fmt.Println()
 }
